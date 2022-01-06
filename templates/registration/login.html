@@ -1,0 +1,25 @@
+{%  extends '../base.html'  %}
+   {% load crispy_forms_tags %}
+
+
+{% block title %}
+    Home
+{% endblock title %}
+
+
+
+{% block content %}
+  
+<div style="margin-left : 5em;">
+    
+           <h2>Log In</h2>
+           <form method="post" class="form" style="width : 30em;" >
+               {% csrf_token %}
+
+               {{ form | crispy}}
+             <button type="submit" class="shadow btn btn-sm btn-success shadoow font-weight-bold"> Log In</button>
+
+           </form>
+</div>
+    
+{% endblock content %}
